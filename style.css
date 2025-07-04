@@ -1,0 +1,546 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lilita+One&display=swap");
+
+:root {
+  /* Light */
+  --bg-1: #f4f6fa;
+  --bg-2: #e8ecf3;
+  --bg-3: #dfe4ef;
+  --text: #171717;
+  --glass: rgba(255, 255, 255, 0.6);
+  --border: rgba(0, 0, 0, 0.05);
+  --accent: #ff914d;
+  --blur: 10px;
+  --radius: 1.5rem;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto;
+}
+
+
+body.dark {
+  --bg-1: #0f0c29;
+  --bg-2: #302b63;
+  --bg-3: #24243e;
+  --text: #f1f1f1;
+  --glass: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  text-decoration: none !important;
+}
+
+#themeToggle {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+#themeToggle:focus,
+#themeToggle:active {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, var(--bg-1), var(--bg-2), var(--bg-3));
+  color: var(--text);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100%;
+}
+
+
+button {
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+ outline: none;
+ border: 0;
+ vertical-align: middle;
+ text-decoration: none;
+ background: transparent;
+ padding: 0;
+ font-size: inherit;
+ font-family: inherit;
+}
+
+button.learn-more {
+ width: 12rem;
+ height: auto;
+}
+
+button.learn-more .circle {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: relative;
+ display: block;
+ margin: 0;
+ width: 3rem;
+ height: 3rem;
+ background: var(--accent);
+ border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ margin: auto;
+ background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ left: 0.625rem;
+ width: 1.125rem;
+ height: 0.125rem;
+ background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+ position: absolute;
+ content: "";
+ top: -0.29rem;
+ right: 0.0625rem;
+ width: 0.625rem;
+ height: 0.625rem;
+ border-top: 0.125rem solid #fff;
+ border-right: 0.125rem solid #fff;
+ transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ padding: 0.75rem 0;
+ margin-left: 40px;
+ color: #282936;
+ font-weight: 700;
+ line-height: 1.6;
+ text-align: center;
+ text-transform: uppercase;
+}
+
+button:hover .circle {
+ width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+ background: #fff;
+ transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+ color: #fff;
+}
+
+.tutorial {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 1rem 4rem;
+}
+
+.profile {
+  max-width: 32rem;
+  margin-inline: auto;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.5rem 2rem;
+  backdrop-filter: blur(var(--blur));
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  color: var(--text);
+}
+
+.profile-image {
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  animation: bounce-in 0.8s 0.15s both;
+}
+
+.profile h5 {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.name-subtext {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.profile h5 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+}
+
+/* -----------------------------------------------------------------
+   5. BODY TEXT
+----------------------------------------------------------------- */
+.profile-text p {
+  line-height: 1.7;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+.seo {
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.profile-subtext {
+  color: var(--text);
+}
+/* -----------------------------------------------------------------
+   6. SOCIAL BUTTONS
+----------------------------------------------------------------- */
+.buttons a {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  margin: 0.4rem 0;
+  padding: 0.85rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  max-width: 20rem;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 3rem;
+  backdrop-filter: blur(calc(var(--blur) * 0.75));
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--text) !important;
+}
+
+.buttons a i {
+  font-size: 1.3rem;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none !important;
+}
+.buttons a:hover {
+  transform: translateY(-3px) scale(1.03);
+  background: var(--accent);
+  color: #000 !important;
+}
+.buttons a:hover i {
+  transform: rotate(360deg);
+}
+
+.btn-size {
+  font-size: 30px;
+}
+
+/* -----------------------------------------------------------------
+   7. FOOTER
+----------------------------------------------------------------- */
+footer {
+  background: rgba(0, 0, 0, 0.15);
+  font-size: 0.85rem;
+  color: var(--text);
+  backdrop-filter: blur(6px);
+}
+footer .footer {
+  padding: 1.2rem 0;
+}
+
+/* -----------------------------------------------------------------
+   8. THEME TOGGLE ICON VISIBILITY
+----------------------------------------------------------------- */
+#themeToggle .bx-moon {
+  display: none;
+}
+body.dark #themeToggle .bx-sun {
+  display: none;
+}
+body.dark #themeToggle .bx-moon {
+  display: inline;
+}
+
+/* -----------------------------------------------------------------
+   9. RESPONSIVE
+----------------------------------------------------------------- */
+@media (max-width: 576px) {
+  .profile {
+    padding: 2rem 1.5rem;
+  }
+  .buttons a {
+    max-width: none;
+  }
+}
+
+.button {
+  margin: auto;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+.button a {
+  display: block;
+  height: 50px;
+  width: 200px;
+  background: var(--accent) !important;
+  color: white;
+  font: 17px/50px Helvetica, Verdana, sans-serif;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  background: -moz-linear-gradient(top, #00b7ea 0%, #009ec3 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #00b7ea),
+    color-stop(100%, #009ec3)
+  );
+  background: -webkit-linear-gradient(top, #00b7ea 0%, #009ec3 100%);
+  background: -o-linear-gradient(top, #00b7ea 0%, #009ec3 100%);
+  background: -ms-linear-gradient(top, #00b7ea 0%, #009ec3 100%);
+  background: linear-gradient(top, #00b7ea 0%, #009ec3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3',GradientType=0 );
+}
+
+b {
+  background: #222;
+  display: block;
+  height: 40px;
+  width: 180px;
+  margin: -50px 0 0 10px;
+  text-align: center;
+  font: 12px/45px Helvetica, Verdana, sans-serif;
+  color: #fff;
+  position: absolute;
+  z-index: -1;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.button a,
+b {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover .top {
+  margin: -80px 0 0 10px;
+  line-height: 35px;
+}
+
+.button:hover .bottom {
+  margin: -10px 0 0 10px;
+}
+
+.button a:active {
+  background: #00b7ea;
+  background: -moz-linear-gradient(top, #00b7ea 36%, #009ec3 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(36%, #00b7ea),
+    color-stop(100%, #009ec3)
+  );
+  background: -webkit-linear-gradient(top, #00b7ea 36%, #009ec3 100%);
+  background: -o-linear-gradient(top, #00b7ea 36%, #009ec3 100%);
+  background: -ms-linear-gradient(top, #00b7ea 36%, #009ec3 100%);
+  background: linear-gradient(top, #00b7ea 36%, #009ec3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3',GradientType=0 );
+}
+
+.button:active .bottom {
+  margin: -20px 0 0 10px;
+}
+
+.button:active .top {
+  margin: -70px 0 0 10px;
+}
+
+
+/* CONSTRUCTION PAGE */
+.construction {
+  margin-top: 100px;
+  text-align: center;
+  max-width: 1000px;
+}
+
+.construction .text {
+    color: var(--text);
+}
+
+.construction .text a{
+    color: var(--text);
+}
+
+.btn {
+  margin-top: 1rem;
+  padding: 0.7rem 1.4rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.first-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+
+/* navigation to construction.html */
+.animated-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 26px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: var(--accent);
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 16px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #212121;
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: #212121;
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px var(--accent);
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
