@@ -484,7 +484,7 @@ b {
 }
 
 .animated-button .arr-1 {
-  right: 16px;
+  right: 8px;
 }
 
 .animated-button .arr-2 {
@@ -586,4 +586,8 @@ button:hover > svg {
 button:hover {
  box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
  transform: translateY(-2px);
+}
+
+#arrow-right {
+  margin-left: 22px !important;
 }
