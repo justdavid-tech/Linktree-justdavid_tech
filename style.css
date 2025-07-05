@@ -308,14 +308,6 @@ body.dark #themeToggle .bx-moon {
 /* -----------------------------------------------------------------
    9. RESPONSIVE
 ----------------------------------------------------------------- */
-@media (max-width: 576px) {
-  .profile {
-    padding: 2rem 1.5rem;
-  }
-  .buttons a {
-    max-width: none;
-  }
-}
 
 .button {
   margin: auto;
@@ -461,10 +453,10 @@ b {
   display: flex;
   align-items: center;
   gap: 4px;
-  padding: 10px 26px;
+  padding: 10px 25px;
   border: 4px solid;
   border-color: transparent;
-  font-size: 16px;
+  font-size: 13px;
   background-color: inherit;
   border-radius: 100px;
   font-weight: 600;
@@ -559,35 +551,63 @@ b {
 
 /* Back button in construction.html */
 button {
- display: flex;
- height: 3em;
- align-items: center;
- justify-content: center;
- background-color: #eeeeee4b;
- border-radius: 3px;
- letter-spacing: 1px;
- transition: all 0.2s linear;
- cursor: pointer;
- border: none;
+  display: flex;
+  height: 3em;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee4b;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: none;
 }
 
 button > svg {
- margin-right: 5px;
- margin-left: 5px;
- font-size: 20px;
- transition: all 0.4s ease-in;
+  margin-right: 4px;
+  margin-left: 4px;
+  font-size: 20px;
+  transition: all 0.4s ease-in;
 }
 
 button:hover > svg {
- font-size: 1.2em;
- transform: translateX(-5px);
+  font-size: 1.2em;
+  transform: translateX(-5px);
 }
 
 button:hover {
- box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
- transform: translateY(-2px);
+  box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+  transform: translateY(-2px);
 }
 
-#arrow-right {
-  margin-left: 22px !important;
+@media (max-width: 576px) {
+  .profile {
+    padding: 2rem 1.5rem;
+  }
+  .buttons a {
+    max-width: none;
+  }
+
+  #themeToggle {
+    margin-bottom: 10px !important;
+  }
+
+  .back {
+    margin-left: 10px;
+  }
+
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .back {
+    margin-left: 30px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px){
+  .back {
+    margin-left: 60px;
+  }
 }
