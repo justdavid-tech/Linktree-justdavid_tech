@@ -15,7 +15,6 @@
     "Segoe UI", Roboto;
 }
 
-
 body.dark {
   --bg-1: #0f0c29;
   --bg-2: #302b63;
@@ -53,8 +52,6 @@ a {
   border: none !important;
 }
 
-
-
 body {
   min-height: 100vh;
   display: flex;
@@ -64,99 +61,98 @@ body {
 }
 
 .header {
-    display: flex;
-    justify-content: space-between !important;
-    align-items: center !important;
-    width: 100%;
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100%;
 }
 
-
 button {
- position: relative;
- display: inline-block;
- cursor: pointer;
- outline: none;
- border: 0;
- vertical-align: middle;
- text-decoration: none;
- background: transparent;
- padding: 0;
- font-size: inherit;
- font-family: inherit;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
 }
 
 button.learn-more {
- width: 12rem;
- height: auto;
+  width: 12rem;
+  height: auto;
 }
 
 button.learn-more .circle {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- position: relative;
- display: block;
- margin: 0;
- width: 3rem;
- height: 3rem;
- background: var(--accent);
- border-radius: 1.625rem;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: var(--accent);
+  border-radius: 1.625rem;
 }
 
 button.learn-more .circle .icon {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- position: absolute;
- top: 0;
- bottom: 0;
- margin: auto;
- background: #fff;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
 }
 
 button.learn-more .circle .icon.arrow {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- left: 0.625rem;
- width: 1.125rem;
- height: 0.125rem;
- background: none;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
 }
 
 button.learn-more .circle .icon.arrow::before {
- position: absolute;
- content: "";
- top: -0.29rem;
- right: 0.0625rem;
- width: 0.625rem;
- height: 0.625rem;
- border-top: 0.125rem solid #fff;
- border-right: 0.125rem solid #fff;
- transform: rotate(45deg);
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
 }
 
 button.learn-more .button-text {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- padding: 0.75rem 0;
- margin-left: 40px;
- color: #282936;
- font-weight: 700;
- line-height: 1.6;
- text-align: center;
- text-transform: uppercase;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin-left: 40px;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 button:hover .circle {
- width: 100%;
+  width: 100%;
 }
 
 button:hover .circle .icon.arrow {
- background: #fff;
- transform: translate(1rem, 0);
+  background: #fff;
+  transform: translate(1rem, 0);
 }
 
 button:hover .button-text {
- color: #fff;
+  color: #fff;
 }
 
 .tutorial {
@@ -230,6 +226,7 @@ button:hover .button-text {
   margin-bottom: 1rem;
   color: var(--text);
 }
+
 .seo {
   font-size: 1.1rem;
   color: var(--accent);
@@ -289,6 +286,10 @@ footer {
 }
 footer .footer {
   padding: 1.2rem 0;
+}
+
+footer p {
+  color: var(--text);
 }
 
 /* -----------------------------------------------------------------
@@ -421,7 +422,6 @@ b {
   margin: -70px 0 0 10px;
 }
 
-
 /* CONSTRUCTION PAGE */
 .construction {
   margin-top: 100px;
@@ -430,11 +430,11 @@ b {
 }
 
 .construction .text {
-    color: var(--text);
+  color: var(--text);
 }
 
-.construction .text a{
-    color: var(--text);
+.construction .text a {
+  color: var(--text);
 }
 
 .btn {
@@ -449,12 +449,11 @@ b {
 }
 
 .first-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
 }
-
 
 /* navigation to construction.html */
 .animated-button {
@@ -543,4 +542,48 @@ b {
   width: 220px;
   height: 220px;
   opacity: 1;
+}
+
+.const:focus,
+.const:active {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.const {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Back button in construction.html */
+button {
+ display: flex;
+ height: 3em;
+ align-items: center;
+ justify-content: center;
+ background-color: #eeeeee4b;
+ border-radius: 3px;
+ letter-spacing: 1px;
+ transition: all 0.2s linear;
+ cursor: pointer;
+ border: none;
+}
+
+button > svg {
+ margin-right: 5px;
+ margin-left: 5px;
+ font-size: 20px;
+ transition: all 0.4s ease-in;
+}
+
+button:hover > svg {
+ font-size: 1.2em;
+ transform: translateX(-5px);
+}
+
+button:hover {
+ box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+ transform: translateY(-2px);
 }
